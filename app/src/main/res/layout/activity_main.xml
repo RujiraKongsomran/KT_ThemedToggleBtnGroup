@@ -1,18 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <nl.bryanderidder.themedtogglebuttongroup.ThemedToggleButtonGroup
+        android:id="@+id/fruit_button_group"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerInParent="true"
+        app:flexWrap="wrap"
+        app:justifyContent="space_between"
+        app:toggle_requiredAmount="1"
+        app:toggle_selectAnimation="circular_reveal"
+        app:toggle_selectableAmount="3">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_margin="20dp"
+            app:toggle_selectedBackgroundColor="#FF5722"
+            app:toggle_text="Orange" />
+
+        <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_margin="20dp"
+            app:toggle_selectedBackgroundColor="#F44336"
+            app:toggle_text="Apples" />
+
+        <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_margin="20dp"
+            app:toggle_selectedBackgroundColor="#673AB7"
+            app:toggle_text="Grape" />
+
+        <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+            android:id="@+id/btn4"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_margin="20dp"
+            app:toggle_selectedBackgroundColor="#FF9800"
+            app:toggle_text="Carrots" />
+
+    </nl.bryanderidder.themedtogglebuttongroup.ThemedToggleButtonGroup>
+
+</RelativeLayout>
